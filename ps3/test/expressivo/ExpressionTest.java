@@ -7,14 +7,29 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+
+// Testing strategy
 /**
- * Tests for the Expression abstract data type.
- */
+ * The testing strategy employed in this given code can be primarily classified as Unit Testing because each test method seems to be testing a single aspect or functionality of the code.
+ * Here is a more detailed explanation of each test method:
+ * testAssertionsEnabled is essentially testing if assertions are enabled in the Java Virtual Machine (JVM). If assertions are not enabled, this would raise an AssertionError, indicating the environment for running the test might not be set up correctly.
+ * testConstantExpressionToString is testing if a ConstantExpression object returns the correct string format when its toString() method is called.
+ * testAddExpressionToString checks that an AddExpression composed of two ConstantExpression objects returns the correct string format when its toString() method is called.
+ * testNestedAddExpressionToString verifies that correctly nested AddExpression objects return the correct string output when their toString() method is invoked.
+ * testComplexExpressionToString checks how complex nested expressions are handled and whether they correctly return the expected string output.
+ * */
 public class ExpressionTest {
 
-    // Testing strategy
-    //   TODO
-    
+    //  Test Case Partitioning
+    /**
+     * Single constant expressions:
+     *          This is shown in the testConstantExpressionToString method where only a single value is being processed.
+     * Simple additive expressions:
+     *          This is shown in the testAddExpressionToString method where two values are being processed together.
+     * Nested additive expressions:
+     *          This is shown in the testNestedAddExpressionToString and testComplexExpressionToString methods where expressions are built upon other previously defined expressions, creating a nested structure.
+     * */
+
     @Test(expected=AssertionError.class)
     public void testAssertionsEnabled() {
         assert false; // make sure assertions are enabled with VM argument: -ea
