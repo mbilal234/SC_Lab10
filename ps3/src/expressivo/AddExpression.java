@@ -1,3 +1,5 @@
+package expressivo;
+
 /**
  * Represents a binary addition expression.
  */
