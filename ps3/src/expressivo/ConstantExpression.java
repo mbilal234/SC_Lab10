@@ -52,4 +52,6 @@ public class ConstantExpression implements Expression {
     }
 
     // TODO: Implement more instance methods if needed
+    // Additional instance methods can be added here if needed
+
 }

@@ -36,7 +36,8 @@ public class MultiplyExpression implements Expression {
 
     @Override
     public String toString() {
-        return "(" + leftOperand.toString() + " * " + rightOperand.toString() + ")";
+        // Use parentheses for clarity and to maintain the correct order of operations
+        return "(" + leftOperand.toString() + " + " + rightOperand.toString() + ")";
     }
 
     @Override
